@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Swoosh</string>
+    <string name="mensButtonLabel">Mens</string>
+    <string name="womensButtonLabel">Womens</string>
+    <string name="co_edButtonLabel">CO-ED</string>
+    <string name="nextButtonLabel">Next</string>
+    <string name="a_basketball_court_with_people_on_it">A basketball court with people on it</string>
+    <string name="the_swoosh_logo">The Swoosh logo</string>
+    <string name="desired_league">Desired League</string>
+    <string name="find_a_team_in_your_city_and_dominate_the_league">Find a team in your city and dominate the league</string>
+    <string name="go_all_in">GO ALL IN</string>
+    <string name="get_started">Get Started</string>
 </resources>
