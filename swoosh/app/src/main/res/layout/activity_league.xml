@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LeagueActivity">
+    tools:context=".Controller.LeagueActivity">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -59,6 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onMenClicked"
             android:text="@string/mensButtonLabel"
             android:textColor="#FFFFFF"
             android:textOff="@string/mensButtonLabel"
@@ -71,6 +72,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onWomenClicked"
             android:text="@string/womensButtonLabel"
             android:textColor="#FFFFFF"
             android:textOff="@string/womensButtonLabel"
@@ -81,10 +83,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onCoedClicked"
             android:text="@string/co_edButtonLabel"
             android:textColor="#FFFFFF"
-            android:textOn="@string/co_edButtonLabel"
-            android:textOff="@string/co_edButtonLabel"/>
+            android:textOff="@string/co_edButtonLabel"
+            android:textOn="@string/co_edButtonLabel" />
     </LinearLayout>
 
     <Button

@@ -1,4 +1,4 @@
-package dev.chrismercer.swoosh
+package dev.chrismercer.swoosh.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
