@@ -36,36 +36,45 @@ open class BaseActivity : AppCompatActivity() {
     //logging, first create a tag
     val TAG = "LifeCycle"
 
+    //called once and once only, view not visible, use to set up click handlers
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.d(TAG,"${javaClass.simpleName} OnCreate")
         super.onCreate(savedInstanceState)
     }
 
+    //makes it visible and is preparing to become interactive
     override fun onStart() {
         Log.d(TAG,"${javaClass.simpleName} OnStart")
         super.onStart()
     }
 
+    //interactvity possible, stays in this state until moving to something else
     override fun onResume() {
         Log.d(TAG,"${javaClass.simpleName} OnResume")
         super.onResume()
     }
 
+    //only called after onStop when it has focus again, then does
+    //on start and on resume
     override fun onRestart() {
         Log.d(TAG,"${javaClass.simpleName} OnRestart")
         super.onRestart()
     }
 
+    //when something else is being done - pause music, etc
     override fun onPause() {
         Log.d(TAG,"${javaClass.simpleName} OnPause")
         super.onPause()
     }
 
+    //when a new activity completely covers the current activity
+    //or another app is used, or on home. used to stop things
     override fun onStop() {
         Log.d(TAG,"${javaClass.simpleName} OnStop")
         super.onStop()
     }
 
+    //called once at the end, free it all up!
     override fun onDestroy() {
         Log.d(TAG,"${javaClass.simpleName} OnDestroy")
         super.onDestroy()
