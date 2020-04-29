@@ -2,25 +2,20 @@ package dev.chrismercer.swoosh.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import dev.chrismercer.swoosh.Model.Player
 import dev.chrismercer.swoosh.R
-import dev.chrismercer.swoosh.Utilities.EXTRA_LEAGUE
-import dev.chrismercer.swoosh.Utilities.EXTRA_SKILL
-import dev.chrismercer.swoosh.Utilities.League
-import dev.chrismercer.swoosh.Utilities.Skill
+import dev.chrismercer.swoosh.Utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_finish.*
 
-class FinishActivity : AppCompatActivity() {
+class FinishActivity : BaseActivity() {
 
-    var selectedLeague = ""
-    var selectedSkill = ""
+    lateinit var player: Player
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_finish)
+        player = intent.getParcelableExtra(EXTRA_PLAYER)
 
-        selectedLeague = intent.getStringExtra(EXTRA_LEAGUE)
-        selectedSkill = intent.getStringExtra(EXTRA_SKILL)
-
-        lookingText.text = "Looking for a ${selectedLeague} ${selectedSkill} league near you..."
+        lookingText.text = "Looking for a ${player.league} ${player.skill} league near you..."
     }
 }
